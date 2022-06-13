@@ -3,7 +3,7 @@ const lowdDB = require('lowdb');
 const FyleSync = require('lowdb/adapters/FileSync')
 const adapter = new FyleSync('src/database.json')
 const db = lowdDB(adapter)
-const app = http.createServer(async(req,res)=>{
+const app = http.createServer((req,res)=>{
 
 	const {method, url} = req
 	switch(method){
